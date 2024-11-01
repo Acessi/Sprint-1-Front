@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="wrapper">
+            <nav>
+                <div class="hamburguer" id="hamburguer-icon">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="content">
+                    <section id="linksCabecalho">
+                        <a href="#">LOGIN</a> |
+                        <a href="#" id="busca">BUSCA</a>
+                    </section>
+                </div>
+                <div>
+                    <img src ="images/logo.png" alt="logo" class="logo"></a>
+                    <a href="#"><img src="images/lupa.png" alt="lupa" class="lupa" id="search-icon"></a>
+                    <a href="#"><img src ="images/usuario_branco.png" alt="perfil" class="perfil"></a>
+                </div>
+                <div id="menu" class="menu">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/usuario.png" alt="Icon 1" class="icon">Acesse sua conta
+                            </a>
+                            <div>
+                                <a href="#" class="cadastre-se">ou cadastre-se grátis</a>
+                            </div>
+                        </li>
+                        <li><a href="#"><img src="images/home.png" alt="Icon 2" class="icon">Home</a></li>
+                        <li><a href="#"><img src="images/mapa.png" alt="Icon 3" class="icon">Mapa do metrô/Trem</a>
+                        </li>
+                        <li><a href="#"><img src="images/reportar.png" alt="Icon 4" class="icon">Reportar para Ceci</a>
+                        </li>
+                        <li><a href="#"><img src="images/falar.png" alt="Icon 5" class="icon">Falar com a Ceci</a>
+                        </li>
+                        <li><a href="#"><img src="images/usuario.png" alt="Icon 6" class="icon">Integrantes</a></li>
+                        <li><a href="#" class="desconectar"><img src="images/deslogar.png" alt="Icon 7" class="icon">Desconectar</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+        <main>
+        <div id="search-container" style="display: none;">
+            <input type="text" id="search-input" placeholder="Digite sua busca..." />
+            <button id="search-button">Pesquisar</button>
+        </div>
+        <div class="botoesMenu">
+            <a href="#" class="botaoM">HOME</a>
+            <a href="#" class="botaoM">MAPA DO METRÔ/TREM</a>
+            <a href="#" class="botaoM botaoReportar">REPORTAR PARA CECI</a>
+            <a href="#" class="botaoM botaoFalar">FALAR COM A CECI</a>
+            <a href="#" class="botaoM">INTEGRANTES</a>
+            <a href="#" class="botaoAtivado">
+                <span id="linha1"><b>ACESSE SUA CONTA</b></span>
+                <span id="linha2">OU CADASTRE-SE GRÁTIS</span>
+            </a>
+        </div>
+        <form name=frmCadastro id="frmCadastro" method="post" enctype="multipart/form-data">
+            <p id="tituloFormulario">Preencha os dados abaixo para realizar o seu cadastro</p>
+            <div class="formGrupo">
+                <div class="campos">
+                    <label for="txtNome">Nome Completo</label>
+                    <br>
+                    <input type="text" name="txtNome" id="txtNome">
+                    <br>
+                    <label for="txtNomeUsuario">Crie um usuário</label>
+                    <br>
+                    <input type="text" name="txtNomeUsuario" id="txtNomeUsuario">
+                    <br>
+                    <label>Digite uma senha</label>
+                    <br>
+                    <input type="password" name="txtCriarSenha" id="txtCriarSenha">
+                    <br>
+                    <label>Confirme a sua senha</label>
+                    <br>
+                    <input type="password" name="txtConfirmarSenha" id="txtConfirmarSenha">
+                    <br>
+                    <div id="divBotaoCadastro">
+                        <a href="#" class="botaoCadastro">Cadastrar</a>
+                    </div>
+                </div>
+                <div class="secao-upload">
+                    <label for="carregarImagem"></label>
+                    <div id="visualizacaoImagem">
+                        <img src="images/default-user.png" alt="Foto de Perfil" id="imagemUsuario">
+                    </div>
+                    <input type="file" name="carregarImagem" id="carregarImagem" accept="image/*">
+                </div>
+            </div>
+        </form>
+        </main>
+    <footer id="rodape">
+        <div class="conteudoRodape">
+            <nav id="navRodape">
+                <div id="pt1">
+                    <a href="#">HOME</a>
+                    <br>
+                    <a href="#">ACESSE A SUA CONTA/ CADASTRE-SE</a>
+                    <br>
+                    <a href="#">MAPA DO METRÔ/ TREM</a>
+                </div>
+                <div id ="pt2">
+                    <a href="#">REPORTAR PARA CECI</a>
+                    <br>
+                    <a href="#">FALAR COM A CECI</a>
+                    <br>
+                    <a href="#">INTEGRANTES</a>
+                </div>
+                <div id="logoRodape">
+                    <img src ="images/logo.png" alt="logo"></a>
+                    <p id="copy">© Copyright 2024 | Grupo CCR</p>
+                </div>
+            </nav>
+        </div>
+    </footer>
+</body>
+    <script src="js/script.js"></script>
+</html>
