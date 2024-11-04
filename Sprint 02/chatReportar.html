@@ -52,6 +52,21 @@
     </header>
 </body>
     <main>
+        <div class="botoesMenu">
+            <a href="#" class="botaoM">HOME</a>
+            <a href="#" class="botaoM">MAPA DO METRÔ/TREM</a>
+            <a href="#" class="botaoM botaoReportarAtivo">REPORTAR PARA CECI</a>
+            <a href="#" class="botaoM botaoFalar">FALAR COM A CECI</a>
+            <a href="#" class="botaoM">INTEGRANTES</a>
+            <a href="#" class="botaoM_Acesse">
+                <span id="linha1"><b>ACESSE SUA CONTA</b></span>
+                <span id="linha2">OU CADASTRE-SE GRÁTIS</span>
+            </a>
+        </div>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Digite sua busca..." />
+            <button id="search-button">Pesquisar</button>
+        </div>
         <div class="chatCeci">
             <img src="images/Ceci_S_BG.png" alt="IconeCeci" class="IconeCeci">
             <p>Olá, <b>Passageiro!</b> Eu sou a <b>Ceci</b>, sua Assistente Virtual.<br>
@@ -65,6 +80,13 @@
             <div class="blocoReportar"><p class="problema"><b>SOM INAUDÍVEL</b></p></div>
             <div class="blocoReportar"><p class="problema"><b>ASSENTO DANIFICADO</b></p></div>
             <div class="blocoReportar"><p class="problema"><b>OUTROS</b></p></div>
+        </div>
+        <div id="chat">
+            <p id="chatConversa"> Digite sua mensagem...</p>
+            <div id="iconesChat">
+                <img src="images/microfone.png" alt="microfone" id="microfone">
+                <img src="images/headphone.png" alt="headphone" id="headphone">
+            </div>
         </div>
     </main>
     <footer id="rodape">

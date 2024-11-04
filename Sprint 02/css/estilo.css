@@ -58,6 +58,7 @@ main {
 }
 
 #search-container {
+    display: none;
     margin: 20px 0; /* Espaçamento superior e inferior */
     position: absolute; /* Torna o contêiner posicionado em relação ao seu elemento pai */
     top: 60px; /* Distância do topo (ajuste conforme necessário) */
@@ -486,7 +487,7 @@ main {
 
 .botaoM_Acesse {
     height: 16px;
-    padding: 10px 20px; /* Espaçamento interno */
+    padding: 12px 20px; /* Espaçamento interno */
     background-color: #ECECEC; /* Cor de fundo */
     color: #342939; /* Cor do texto */
     border: none;
@@ -503,7 +504,7 @@ main {
 
 .botaoAtivado {
     height: 16px;
-    padding: 10px 20px; /* Espaçamento interno */
+    padding: 10px 16px; /* Espaçamento interno */
     background-color: #ECECEC; /* Cor de fundo */
     color: #342939; /* Cor do texto */
     border: 2px solid #342939;
@@ -529,10 +530,22 @@ main {
 
 .botaoReportar {
     border: 2px solid #B30000;
+    padding: 8px 16px;
+}
+
+.botaoReportarAtivo {
+    background-color: #B30000;
+    color: #ffffff;
 }
 
 .botaoFalar {
     border: 2px solid #FFC813;
+    padding: 8px 16px;
+}
+
+.botaoFalarAtivo {
+    background-color: #FFC813;
+    color: #ffffff;
 }
 
 #mapaMetro {
@@ -619,11 +632,11 @@ h1 {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-left: 0px;
-    margin-top: 20px;
+    margin-left: 43px;
+    margin-top: -10px;
     padding: 10px;
     border-radius: 20px;
-    width: 600px;
+    width: 680px;
 }
 
 .IconeCeci {
@@ -632,28 +645,30 @@ h1 {
 
 p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 #blocoVazio {
-    height: 200px;
-    background-color: #16ad1b;
+    height: 230px;
+}
+
+#blocosProblema {
+    display: flex; /* Usando flexbox para alinhar os itens em linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
     width: 1050px;
 }
 
-#blocosproblema {
-    display: flex; /* Usando flexbox para alinhar os itens em linha */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 10px; /* Espaço entre os blocos */
-}
-
 .blocoReportar {
+    display: flex;               /* Torna o contêiner um flexbox */
+    align-items: center;         /* Centraliza o texto verticalmente */
+    justify-content: center;     /* Centraliza o texto horizontalmente */
     border: 2px solid #6C6C6C;
-    border-radius: 10px;
-    width: 130px;
+    border-radius: 20px;
+    width: 150px;
     background-color: #D9D9D9;
     padding: 5px;
     text-align: center;
+    height: 40px;
 }
 
 .problema{
@@ -662,33 +677,148 @@ p {
     color: #D70202;
 }
 
-/* Para telas menores que 600px */
-@media (max-width: 600px) {
-    .menu {
-        width: 250px; /* Nova largura para telas pequenas */
-    }
-    .menu ul li div .cadastre-se {
-        margin-left: -40px;
-    }
+#chat {
+    display: flex;                /* Torna o contêiner um flexbox */
+    justify-content: space-between; /* Posiciona o texto à esquerda e os ícones à direita */
+    align-items: center;          /* Centraliza os itens verticalmente */
+    border: 2px solid #6C6C6C;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 1015px;
+    height: 30px;
+    padding: 0 10px;              /* Adiciona um pouco de padding para afastar o conteúdo das bordas */
 }
 
-/* Para telas de 600px até 768px */
-@media (min-width: 600px) and (max-width: 768px) {
-    .menu {
-        width: 220px; /* Nova largura para telas médias */
-    }
+#chatConversa {
+    margin: 0;                    /* Remove margens do texto */
+    color: #4b4b4b;
 }
 
-/* Para telas de 768px até 992px */
-@media (min-width: 768px) and (max-width: 992px) {
-    .menu {
-        width: 240px; /* Nova largura para telas maiores */
-    }
+#iconesChat {
+    display: flex;                /* Organiza os ícones lado a lado */
+    gap: 5px;                     /* Espaço entre os ícones */
+    margin-right: 0;
 }
 
-/* Para telas maiores que 992px */
-@media (min-width: 992px) {
-    .menu {
-        width: 270px; /* Nova largura para telas muito grandes */
-    }
+#microfone, #headphone {
+    width: 25px;                  /* Define a largura dos ícones */
+}
+
+#blocoVazioAjuda {
+    height: 284px;
+    width: 1050px;
+}
+
+.chatCeciAjuda {
+    background-color:#ECECEC;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 44px;
+    margin-top: -10px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 525px;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    margin-left: 40px;
+    margin-top: -10px;
+    font-weight: normal;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    text-align: center;
+    font-weight: normal;
+    border: 2px solid #6C6C6C;
+    width: 1050px;
+    border-radius: 10px;
+    margin-top: 12px;
+    padding: 2px;
+    background-color: #F8F8F8;
+}
+
+#blocoNotificacoes {
+    display: flex;
+    width: 1052px;
+    background-color: #ECECEC;
+    border: 2px solid #D70202;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 80px;
+}
+
+.notificacoes {
+    display: flex;
+    align-items: center;       /* Centraliza verticalmente */
+    padding: 10px;
+    width: 100%;
+}
+
+.numeroLinha4 {
+    border: 2px solid #F8EE00;
+    background-color: #F8EE00;
+    border-radius: 50px;
+    width: 20px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-right: 10px;
+}
+
+.numeroLinha5 {
+    border: 2px solid #76509C;
+    background-color: #76509C;
+    border-radius: 50px;
+    width: 20px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-right: 10px;
+}
+
+.numeroLinha8 {
+    border: 2px solid #9F9F95;
+    background-color: #9F9F95;
+    border-radius: 50px;
+    width: 20px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-right: 10px;
+}
+
+.numeroLinha9 {
+    border: 2px solid #00B292;
+    background-color: #00B292;
+    border-radius: 50px;
+    width: 20px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-right: 10px;
+}
+
+.infoProblema {
+    text-align: left;
+    margin-left: 0;
+}
+
+.hora {
+    font-size: 14px;
+    white-space: nowrap;       /* Evita quebra de linha para a hora */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-right: 10px;
+}
+
+p.linhaProblema, p.notificado {
+    margin: 2px;
 }
