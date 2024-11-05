@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
     <title>Reportar</title>
 </head>
+
 <body>
     <header id="header">
         <div class="wrapper">
@@ -17,94 +19,114 @@
                 </div>
                 <div class="content">
                     <section id="linksCabecalho">
-                        <a href="#">LOGIN</a> |
+                        <a href="login.html">LOGIN</a> |
                         <a href="#" id="busca">BUSCA</a>
                     </section>
                 </div>
                 <div>
                     <img src ="images/logo.png" alt="logo" class="logo"></a>
                     <a href="#"><img src="images/lupa.png" alt="lupa" class="lupa" id="search-icon"></a>
-                    <a href="#"><img src ="images/usuario_branco.png" alt="perfil" class="perfil"></a>
+                    <a href="atualizarCadastro.html"><img src ="images/usuario_branco.png" alt="perfil" class="perfil"></a>
                 </div>
                 <div id="menu" class="menu">
                     <ul>
                         <li>
-                            <a href="#">
-                                <img src="images/usuario.png" alt="Icon 1" class="icon">Acesse sua conta
+                            <a href="login.html">
+                                <img src="images/usuario.png" alt="Ícone para acessar conta" class="icon">Acesse sua conta
                             </a>
                             <div>
-                                <a href="#" class="cadastre-se">ou cadastre-se grátis</a>
+                                <a href="cadastro.html" class="cadastre-se">ou cadastre-se grátis</a>
                             </div>
                         </li>
-                        <li><a href="#"><img src="images/home.png" alt="Icon 2" class="icon">Home</a></li>
-                        <li><a href="#"><img src="images/mapa.png" alt="Icon 3" class="icon">Mapa do metrô/Trem</a>
+                        <li>
+                            <a href="home.html">
+                                <img src="images/home.png" alt="Ícone da página inicial" class="icon">Home
+                            </a>
                         </li>
-                        <li><a href="#"><img src="images/reportar.png" alt="Icon 4" class="icon">Reportar para Ceci</a>
+                        <li>
+                            <a href="mapaMetro.html">
+                                <img src="images/mapa.png" alt="Ícone de mapa do metrô e trem" class="icon">Mapa do metrô/Trem
+                            </a>
                         </li>
-                        <li><a href="#"><img src="images/falar.png" alt="Icon 5" class="icon">Falar com a Ceci</a>
+                        <li>
+                            <a href="chatReportar.html">
+                                <img src="images/reportar.png" alt="Ícone para reportar problema para Ceci" class="icon">Reportar para Ceci
+                            </a>
                         </li>
-                        <li><a href="#"><img src="images/usuario.png" alt="Icon 6" class="icon">Integrantes</a></li>
-                        <li><a href="#" class="desconectar"><img src="images/deslogar.png" alt="Icon 7" class="icon">Desconectar</a></li>
+                        <li>
+                            <a href="chatAjuda.html">
+                                <img src="images/falar.png" alt="Ícone para pedir ajuda à Ceci" class="icon">Falar com a Ceci
+                            </a>
+                        </li>
+                        <li>
+                            <a href="integrantes.html">
+                                <img src="images/usuario.png" alt="Ícone de integrantes da equipe" class="icon">Integrantes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="desconectar">
+                                <img src="images/deslogar.png" alt="Ícone para desconectar" class="icon">Desconectar
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
-</body>
-    <main>
-        <div class="botoesMenu">
-            <a href="#" class="botaoM">HOME</a>
-            <a href="#" class="botaoM">MAPA DO METRÔ/TREM</a>
-            <a href="#" class="botaoM botaoReportarAtivo">REPORTAR PARA CECI</a>
-            <a href="#" class="botaoM botaoFalar">FALAR COM A CECI</a>
-            <a href="#" class="botaoM">INTEGRANTES</a>
-            <a href="#" class="botaoM_Acesse">
-                <span id="linha1"><b>ACESSE SUA CONTA</b></span>
-                <span id="linha2">OU CADASTRE-SE GRÁTIS</span>
-            </a>
-        </div>
-        <div id="search-container">
-            <input type="text" id="search-input" placeholder="Digite sua busca..." />
-            <button id="search-button">Pesquisar</button>
-        </div>
-        <div class="chatCeci">
-            <img src="images/Ceci_S_BG.png" alt="IconeCeci" class="IconeCeci">
-            <p>Olá, <b>Passageiro!</b> Eu sou a <b>Ceci</b>, sua Assistente Virtual.<br>
-                Selecione uma das opções abaixo para que eu possa te ajudar a <b>reportar:</b></p>
-        </div>
-        <div id="blocoVazio"></div>
-        <div id="blocosProblema">
-            <div class="blocoReportar"><p class="problema"><b>LIMPEZA INADEQUADA</b></p></div>
-            <div class="blocoReportar"><p class="problema"><b>VAGÃO LOTADO</b></p></div>
-            <div class="blocoReportar"><p class="problema"><b>ILUMINAÇÃO INSUFICIENTE</b></p></div>
-            <div class="blocoReportar"><p class="problema"><b>SOM INAUDÍVEL</b></p></div>
-            <div class="blocoReportar"><p class="problema"><b>ASSENTO DANIFICADO</b></p></div>
-            <div class="blocoReportar"><p class="problema"><b>OUTROS</b></p></div>
-        </div>
-        <div id="chat">
-            <p id="chatConversa"> Digite sua mensagem...</p>
-            <div id="iconesChat">
-                <img src="images/microfone.png" alt="microfone" id="microfone">
-                <img src="images/headphone.png" alt="headphone" id="headphone">
+        <main>
+            <div class="botoesMenu">
+                <a href="home.html" class="botaoM">HOME</a>
+                <a href="mapaMetro.html" class="botaoM">MAPA DO METRÔ/TREM</a>
+                <a href="chatReportar.html" class="botaoM botaoReportarAtivo">REPORTAR PARA CECI</a>
+                <a href="chatAjuda.html" class="botaoM botaoFalar">FALAR COM A CECI</a>
+                <a href="integrantes.html" class="botaoM">INTEGRANTES</a>
+                <a href="login.html" class="botaoM_Acesse">
+                    <span id="linha1"><b>ACESSE SUA CONTA</b></span>
+                    <span id="linha2">OU CADASTRE-SE GRÁTIS</span>
+                </a>
             </div>
-        </div>
-    </main>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Digite sua busca..." />
+                <button id="search-button">Pesquisar</button>
+            </div>
+            <div class="chatCeci">
+                <img src="images/Ceci_S_BG.png" alt="IconeCeci" class="IconeCeci">
+                <p>Olá, <b>Passageiro!</b> Eu sou a <b>Ceci</b>, sua Assistente Virtual.<br>
+                    Selecione uma das opções abaixo para que eu possa te ajudar a <b>reportar:</b></p>
+            </div>
+            <div id="blocoVazio"></div>
+            <div id="blocosProblema">
+                <div class="blocoReportar"><p class="problema"><b>LIMPEZA INADEQUADA</b></p></div>
+                <div class="blocoReportar"><p class="problema"><b>VAGÃO LOTADO</b></p></div>
+                <div class="blocoReportar"><p class="problema"><b>ILUMINAÇÃO INSUFICIENTE</b></p></div>
+                <div class="blocoReportar"><p class="problema"><b>SOM INAUDÍVEL</b></p></div>
+                <div class="blocoReportar"><p class="problema"><b>ASSENTO DANIFICADO</b></p></div>
+                <div class="blocoReportar"><p class="problema"><b>OUTROS</b></p></div>
+            </div>
+            <div id="chat">
+                <p id="chatConversa"> Digite sua mensagem...</p>
+                <div id="iconesChat">
+                    <img src="images/microfone.png" alt="microfone" id="microfone">
+                    <img src="images/headphone.png" alt="headphone" id="headphone">
+                </div>
+            </div>
+        </main>
     <footer id="rodape">
         <div class="conteudoRodape">
             <nav id="navRodape">
                 <div id="pt1">
-                    <a href="#">HOME</a>
+                    <a href="home.html">HOME</a>
                     <br>
-                    <a href="#">ACESSE A SUA CONTA/ CADASTRE-SE</a>
+                    <a href="login.html">ACESSE A SUA CONTA/ CADASTRE-SE</a>
                     <br>
-                    <a href="#">MAPA DO METRÔ/ TREM</a>
+                    <a href="mapaMetro.html">MAPA DO METRÔ/ TREM</a>
                 </div>
                 <div id ="pt2">
-                    <a href="#">REPORTAR PARA CECI</a>
+                    <a href="chatReportar.html">REPORTAR PARA CECI</a>
                     <br>
-                    <a href="#">FALAR COM A CECI</a>
+                    <a href="chatAjuda.html">FALAR COM A CECI</a>
                     <br>
-                    <a href="#">INTEGRANTES</a>
+                    <a href="integrantes.html">INTEGRANTES</a>
                 </div>
                 <div id="logoRodape">
                     <img src ="images/logo.png" alt="logo"></a>

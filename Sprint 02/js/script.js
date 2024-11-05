@@ -6,41 +6,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const busca = document.getElementById('busca');
 
     // Alterna o menu ao clicar no ícone do hambúrguer
-    hamburguerIcon.addEventListener('click', () => {
+    hamburguerIcon.addEventListener('click', (event) => {
+        event.stopPropagation(); // Evita que o evento se propague e acione o evento de clique fora do menu
         if (menu.classList.contains('show')) {
             menu.classList.remove('show');
             menu.classList.add('hide');
         } else {
-            menu.style.display = 'block'; // Torna o menu visível antes de adicionar a classe show
+            menu.style.display = 'block';
             menu.classList.remove('hide');
             menu.classList.add('show');
         }
     });
 
-    // Fecha o menu ao clicar fora dele, deslizando para a esquerda
+    // Alterna o campo de pesquisa ao clicar na lupa ou no link "BUSCA"
+    searchIcon.addEventListener('click', (event) => {
+        event.stopPropagation(); // Evita que o evento se propague e acione o evento de clique fora do menu
+        searchContainer.style.display = 
+            searchContainer.style.display === 'block' ? 'none' : 'block';
+    });
+
+    busca.addEventListener('click', (event) => {
+        event.stopPropagation(); // Evita que o evento se propague e acione o evento de clique fora do menu
+        searchContainer.style.display = 
+            searchContainer.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Fecha o menu ao clicar fora dele
     document.addEventListener('click', (event) => {
         const isClickInsideMenu = menu.contains(event.target);
-        const isClickOnHamburguer = hamburguerIcon.contains(event.target);
-        const isClickOnSearch = searchIcon.contains(event.target);
-        const isClickOnBusca = busca.contains(event.target); // Verifica se clicou no link de busca
+        const isClickInsideSearch = searchContainer.contains(event.target);
 
-        // Se o clique não for no menu nem no ícone do hambúrguer, feche o menu
-        if (!isClickInsideMenu && !isClickOnHamburguer) {
+        if (!isClickInsideMenu && menu.classList.contains('show')) {
             menu.classList.remove('show');
             menu.classList.add('hide');
         }
 
-        // Alterna o campo de pesquisa ao clicar na lupa ou no link "BUSCA"
-        if (isClickOnSearch || isClickOnBusca) {
-            if (searchContainer.style.display === 'none' || searchContainer.style.display === '') {
-                searchContainer.style.display = 'block'; // Exibe o campo de pesquisa
-            } else {
-                searchContainer.style.display = 'none'; // Oculta o campo de pesquisa
-            }
-        }
-
-        // Fecha o campo de pesquisa ao clicar fora dele
-        if (!searchContainer.contains(event.target) && !isClickOnSearch && !isClickOnBusca) {
+        if (!isClickInsideSearch && searchContainer.style.display === 'block') {
             searchContainer.style.display = 'none';
         }
     });
@@ -48,30 +49,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Adiciona um evento de animação para ocultar o menu após a animação de saída
     menu.addEventListener('animationend', () => {
         if (menu.classList.contains('hide')) {
-            menu.style.display = 'none'; // Oculta o menu após a animação
+            menu.style.display = 'none';
         }
     });
 });
 
-// Adiciona um evento de mudança (change) ao input de upload de imagem
-document.getElementById('carregarImagem').addEventListener('change', function(event) {
-    // Obtém o elemento onde a imagem carregada será exibida
-    const visualizacaoImagem = document.getElementById('imagemUsuario');
-    // Obtém o arquivo selecionado pelo usuário
-    const arquivo = event.target.files[0];
+// Função para visualizar imagem carregada pelo usuário
+document.addEventListener('DOMContentLoaded', () => {
+    const inputImagem = document.getElementById('carregarImagem');
+    if (inputImagem) {
+        inputImagem.addEventListener('change', function(event) {
+            const visualizacaoImagem = document.getElementById('imagemUsuario');
+            const arquivo = event.target.files[0];
 
-    // Verifica se algum arquivo foi selecionado
-    if (arquivo) {
-        // Cria um objeto FileReader para ler o conteúdo do arquivo
-        const leitor = new FileReader();
-
-        // Define uma função que será chamada quando o FileReader terminar de carregar o arquivo
-        leitor.onload = function(e) {
-            // Define a imagem carregada como o resultado do FileReader (a URL da imagem)
-            visualizacaoImagem.src = e.target.result;
-        };
-
-        // Lê o conteúdo do arquivo como uma URL de dados (Data URL)
-        leitor.readAsDataURL(arquivo);
+            if (arquivo) {
+                const leitor = new FileReader();
+                leitor.onload = function(e) {
+                    visualizacaoImagem.src = e.target.result;
+                };
+                leitor.readAsDataURL(arquivo);
+            }
+        });
     }
 });

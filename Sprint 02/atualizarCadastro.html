@@ -18,36 +18,57 @@
                     <div class="line"></div>
                 </div>
                 <div class="content">
-                    <section id="linksCabecalho">
-                        <a href="#">LOGIN</a> |
+                    <div id="linksCabecalho">
+                        <a href="login.html">LOGIN</a> |
                         <a href="#" id="busca">BUSCA</a>
-                    </section>
+                    </div>
                 </div>
-                <div>
-                    <img src ="images/logo.png" alt="logo" class="logo"></a>
-                    <a href="#"><img src="images/lupa.png" alt="lupa" class="lupa" id="search-icon"></a>
-                    <a href="#"><img src ="images/usuario_branco.png" alt="perfil" class="perfil"></a>
-                </div>
+                <img src ="images/logo.png" alt="logo" class="logo"></a>
+                <div class="iconesCabecalho">
+                    <a href="#"><img src="images/lupa.png" alt="Ícone de lupa para abrir o campo de busca" class="Icone lupa para busca" id="search-icon"></a>
+                    <a href="atualizarCadastro.html"><img src="images/usuario_branco.png" alt="Ícone de perfil para acessar ou atualizar cadastro" class="perfil"></a>
+                </div>                
                 <div id="menu" class="menu">
                     <ul>
                         <li>
-                            <a href="#">
-                                <img src="images/usuario.png" alt="Icon 1" class="icon">Acesse sua conta
+                            <a href="login.html">
+                                <img src="images/usuario.png" alt="Ícone para acessar conta" class="icon">Acesse sua conta
                             </a>
                             <div>
-                                <a href="#" class="cadastre-se">ou cadastre-se grátis</a>
+                                <a href="cadastro.html" class="cadastre-se">ou cadastre-se grátis</a>
                             </div>
                         </li>
-                        <li><a href="#"><img src="images/home.png" alt="Icon 2" class="icon">Home</a></li>
-                        <li><a href="#"><img src="images/mapa.png" alt="Icon 3" class="icon">Mapa do metrô/Trem</a>
+                        <li>
+                            <a href="home.html">
+                                <img src="images/home.png" alt="Ícone da página inicial" class="icon">Home
+                            </a>
                         </li>
-                        <li><a href="#"><img src="images/reportar.png" alt="Icon 4" class="icon">Reportar para Ceci</a>
+                        <li>
+                            <a href="mapaMetro.html">
+                                <img src="images/mapa.png" alt="Ícone de mapa do metrô e trem" class="icon">Mapa do metrô/Trem
+                            </a>
                         </li>
-                        <li><a href="#"><img src="images/falar.png" alt="Icon 5" class="icon">Falar com a Ceci</a>
+                        <li>
+                            <a href="chatReportar.html">
+                                <img src="images/reportar.png" alt="Ícone para reportar problema para Ceci" class="icon">Reportar para Ceci
+                            </a>
                         </li>
-                        <li><a href="#"><img src="images/usuario.png" alt="Icon 6" class="icon">Integrantes</a></li>
-                        <li><a href="#" class="desconectar"><img src="images/deslogar.png" alt="Icon 7" class="icon">Desconectar</a></li>
-                    </ul>
+                        <li>
+                            <a href="chatAjuda.html">
+                                <img src="images/falar.png" alt="Ícone para pedir ajuda à Ceci" class="icon">Falar com a Ceci
+                            </a>
+                        </li>
+                        <li>
+                            <a href="integrantes.html">
+                                <img src="images/usuario.png" alt="Ícone de integrantes da equipe" class="icon">Integrantes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="desconectar">
+                                <img src="images/deslogar.png" alt="Ícone para desconectar" class="icon">Desconectar
+                            </a>
+                        </li>
+                    </ul>                    
                 </div>
             </nav>
         </div>
@@ -58,12 +79,12 @@
             <button id="search-button">Pesquisar</button>
         </div>
         <div class="botoesMenu">
-            <a href="#" class="botaoM">HOME</a>
-            <a href="#" class="botaoM">MAPA DO METRÔ/TREM</a>
-            <a href="#" class="botaoM botaoReportar">REPORTAR PARA CECI</a>
-            <a href="#" class="botaoM botaoFalar">FALAR COM A CECI</a>
-            <a href="#" class="botaoM">INTEGRANTES</a>
-            <a href="#" class="botaoAtivado">
+            <a href="home.html" class="botaoM">HOME</a>
+            <a href="mapaMetro.html" class="botaoM">MAPA DO METRÔ/TREM</a>
+            <a href="chatReportar.html" class="botaoM botaoReportar">REPORTAR PARA CECI</a>
+            <a href="chatAjuda.html" class="botaoM botaoFalar">FALAR COM A CECI</a>
+            <a href="integrantes.html" class="botaoM">INTEGRANTES</a>
+            <a href="login.html" class="botaoAtivado">
                 <span id="linha1"><b>ACESSE SUA CONTA</b></span>
                 <span id="linha2">OU CADASTRE-SE GRÁTIS</span>
             </a>
@@ -89,7 +110,7 @@
                     <input type="password" name="txtConfirmarSenha" id="txtConfirmarSenha">
                     <br>
                     <div id="divBotaoCadastro">
-                        <a href="#" class="botaoCadastro">Atualizar Cadastro</a>
+                        <a href="home.html" class="botaoCadastro">Atualizar Cadastro</a>
                     </div>
                 </div>
                 <div class="secao-upload">
@@ -106,18 +127,18 @@
         <div class="conteudoRodape">
             <nav id="navRodape">
                 <div id="pt1">
-                    <a href="#">HOME</a>
+                    <a href="home.html">HOME</a>
                     <br>
-                    <a href="#">ACESSE A SUA CONTA/ CADASTRE-SE</a>
+                    <a href="login.html">ACESSE A SUA CONTA/ CADASTRE-SE</a>
                     <br>
-                    <a href="#">MAPA DO METRÔ/ TREM</a>
+                    <a href="mapaMetro.html">MAPA DO METRÔ/ TREM</a>
                 </div>
                 <div id ="pt2">
-                    <a href="#">REPORTAR PARA CECI</a>
+                    <a href="chatReportar.html">REPORTAR PARA CECI</a>
                     <br>
-                    <a href="#">FALAR COM A CECI</a>
+                    <a href="chatAjuda.html">FALAR COM A CECI</a>
                     <br>
-                    <a href="#">INTEGRANTES</a>
+                    <a href="integrantes.html">INTEGRANTES</a>
                 </div>
                 <div id="logoRodape">
                     <img src ="images/logo.png" alt="logo"></a>
