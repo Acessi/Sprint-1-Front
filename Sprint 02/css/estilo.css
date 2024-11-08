@@ -9,6 +9,12 @@
     background-color: black;
 }
 
+#headerCCR{
+    width: 100%;
+    height: 75px;
+    background-color: #B30000;
+}
+
 .wrapper{
     width: 90%;
     height: 60px;
@@ -30,6 +36,24 @@ nav {
     background-color: #000000;
     padding: 0px 20px;
 }
+.hamb{
+    width: 33%;
+    height: 50px;
+    margin-top:10px;
+    float: left;
+}
+.linkHeader{
+    width: 33%;
+    height: 50px;
+    margin-top:10px;
+    float: left;
+}
+
+#navCCR {
+    position: relative;
+    background-color: #B30000;
+    padding: 0px 20px;
+}
 
 main {
     flex: 1; /* Isso faz o conteúdo principal ocupar o espaço restante */
@@ -39,22 +63,9 @@ main {
 .logo{
     display: flex;
     align-items: center;
-    width: 80px;
-    margin-top: -60px;
-}
-
-.lupa {
-    display: flex;
-    margin-left: 1080px;
-    width: 28px; 
-    margin-top: -42px;
-}
-
-.perfil {
-    display: flex;
-    margin-left: 1120px;
-    width: 26px; 
-    margin-top: -29px;
+    width: 33%;
+    margin-top: 10px;
+    float:left;
 }
 
 #search-container {
@@ -82,11 +93,11 @@ main {
     padding: 10px; /* Espaçamento interno do botão */
     cursor: pointer; /* Muda o cursor ao passar por cima do botão */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #16ad1b;
     color: white;
     border-radius: 5px;
     border: none;
     border-radius: 20px;
+    background-color: #16ad1b;
 }
 
 .hamburguer {
@@ -98,7 +109,7 @@ main {
     height: 25px;
     position: absolute;
     left: 20px; /* Posiciona o ícone hambúrguer à esquerda */
-    top: 25px;  /* Ajusta a distância do topo */
+    top: 15px;  /* Ajusta a distância do topo */
 }
 
 .line {
@@ -109,22 +120,39 @@ main {
     margin: 2px 0;
 }
 
-.content{
-    width: calc(100% - 40px);
+.linksCabecalho a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto */
 }
 
-#linksCabecalho {
+.linksCabecalho {
+    float:left;
     text-align: right;
     color: white;
     font-size: 13px;
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    line-height: 75px; /* Pq a altura do meu perfil 20px tb - fica centralizado */
-    margin-right: 100px;
+    margin-left: 100px;
 }
 
-#linksCabecalho a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: white; /* Cor do texto */
+.logo img{
+    width: 80px;
+}
+
+.lupa {
+    margin-top: 13px;
+    float: left;
+    width: 28px;
+    margin-left: 10px;
+}
+
+.perfil {
+    margin-top: 13px;
+    float: left;
+    width: 26px;
+    margin-left: 10px;  
 }
 
 .menu {
@@ -680,27 +708,42 @@ p {
     height: 40px;
 }
 
+.blocoReportar a {
+    text-decoration: none;
+}
+
 .problema{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
     color: #D70202;
+    text-decoration: none;
 }
 
 #chat {
     display: flex;                /* Torna o contêiner um flexbox */
     justify-content: space-between; /* Posiciona o texto à esquerda e os ícones à direita */
     align-items: center;          /* Centraliza os itens verticalmente */
-    border: 2px solid #6C6C6C;
-    border-radius: 10px;
     margin-top: 10px;
     width: 1015px;
     height: 30px;
     padding: 0 10px;              /* Adiciona um pouco de padding para afastar o conteúdo das bordas */
+    outline: none;           /* Remove o contorno azul padrão ao clicar */
 }
 
 #chatConversa {
-    margin: 0;                    /* Remove margens do texto */
-    color: #4b4b4b;
+    width: 100%;             /* Largura do campo */
+    padding: 10px;           /* Espaço interno */
+    font-size: 14px;         /* Tamanho da fonte */
+    border: 2px solid #6C6C6C;
+    border-radius: 10px;
+    box-sizing: border-box;  /* Inclui o padding na largura total */
+    margin-left: -15px;
+}
+
+/* Adiciona uma borda diferente quando o campo está ativo */
+#chatConversa:focus {
+    border-color: #007bff;   /* Cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra ao focar */
 }
 
 #iconesChat {
@@ -730,6 +773,18 @@ p {
     width: 525px;
 }
 
+.chatCeciAjudaColaborador {
+    background-color:#ECECEC;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 44px;
+    margin-top: -10px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 538px;
+}
+
 h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
@@ -749,6 +804,15 @@ h3 {
     margin-top: 12px;
     padding: 2px;
     background-color: #F8F8F8;
+}
+
+h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    text-align: right;
+    font-weight: normal;
+    margin-top: 12px;
+    margin-right: 50px;
 }
 
 #blocoNotificacoes {
@@ -834,7 +898,7 @@ p.linhaProblema, p.notificado {
 
 #botoesReportarAjuda {
     display: flex; /* Coloca os botões em linha */
-    width: 550px;
+    width: 510px;
 }
 
 .botaoR {
@@ -862,18 +926,69 @@ p.linhaProblema, p.notificado {
 
 a.botaoR {
     display: flex;
-    width: 250px;
+    width: 210px;
     margin-top: 20px;
+    text-align: center;
 }
 
 a.botaoA {
     display: flex;
     width: 220px;
     margin-top: 20px;
+    text-align: center;
 }
 
 img.icone-botao {
     width: 30px;
     margin: 0;
     margin-right: 5px;
+}
+
+#esqueciSenhaTitulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    margin: 0px;
+    margin-top: 90px;
+}
+
+#esqueciSenhaTexto {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin: 0px;
+    margin-top: 15px;
+}
+
+#inputEmail {
+    text-align: center;
+}
+
+#inputEmail input[type="text"]{
+    width:285px; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin-top: 20px; /* Espaçamento superior */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho da fonte */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#botaoES {
+    padding: 10px 15px; /* Espaçamento interno */
+    background-color: #16ad1b; /* Cor de fundo */
+    width: 70px;
+    border: none; /* Sem borda */
+    border-radius: 20px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar por cima */
+    font-size: 16px; /* Tamanho da fonte */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+#botaoES a {
+    text-decoration: none; /* Remove sublinhado */
+    color: white; /* Cor do texto */
 }

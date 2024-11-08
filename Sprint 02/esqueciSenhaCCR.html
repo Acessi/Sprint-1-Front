@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="icon" href="images/logo.png" type="faviconLogo">
-    <title>Atualização de Cadastro</title>
+    <title>Redefinir Senha</title>
 </head>
 
 <body>
@@ -86,79 +86,40 @@
         </div>
     </header>
         <main>
-        <div id="search-container">
-            <input type="text" id="search-input" placeholder="Digite sua busca..." />
-            <button id="search-button">Pesquisar</button>
-        </div>
-        <div class="botoesMenu">
-            <a href="homeCCR.html" class="botaoM">HOME</a>
-            <a href="mapaMetroCCR.html" class="botaoM">MAPA DO METRÔ/TREM</a>
-            <a href="chatReportarCCR.html" class="botaoM botaoReportar">NOTIFICAR PARA A CECI</a>
-            <a href="chatAjudaCCR.html" class="botaoM botaoFalar">FALAR COM A CECI</a>
-            <a href="integrantesCCR.html" class="botaoM">INTEGRANTES</a>
-            <a href="loginCCR.html" class="botaoAtivado">
-                <span id="linha1"><b>ACESSE SUA CONTA</b></span>
-                <span id="linha2">OU CADASTRE-SE GRÁTIS</span>
-            </a>
-        </div>
-        <form name=frmCadastro id="frmCadastro" method="post" enctype="multipart/form-data">
-            <p id="tituloFormulario">Atualize os dados do seu cadastro</p>
-            <div class="formGrupo">
-                <div class="campos">
-                    <label for="txtNome">Nome Completo</label>
-                    <br>
-                    <input type="text" name="txtNome" id="txtNome">
-                    <br>
-                    <label for="txtNomeUsuario">Crie um usuário</label>
-                    <br>
-                    <input type="text" name="txtNomeUsuario" id="txtNomeUsuario">
-                    <br>
-                    <label>Digite sua nova senha</label>
-                    <br>
-                    <input type="password" name="txtCriarSenha" id="txtCriarSenha">
-                    <br>
-                    <label>Confirme a sua nova senha</label>
-                    <br>
-                    <input type="password" name="txtConfirmarSenha" id="txtConfirmarSenha">
-                    <br>
-                    <div id="divBotaoCadastro">
-                        <a href="homeCCR.html" class="botaoCadastro">Atualizar Cadastro</a>
-                    </div>
-                </div>
-                <div class="secao-upload">
-                    <label for="carregarImagem"></label>
-                    <div id="visualizacaoImagem">
-                        <img src="images/default-user.png" alt="Foto de Perfil" id="imagemUsuario">
-                    </div>
-                    <input type="file" name="carregarImagem" id="carregarImagem" accept="image/*">
-                </div>
+            <h1 id="esqueciSenhaTitulo">Esqueceu sua senha?</h1>
+            <h2 id="esqueciSenhaTexto">Enviaremos um e-mail com instruções<br>de como redefinir a sua senha!<br><br>
+                Digite o e-mail cadastrado:</h2>
+            <div id="inputEmail">
+                <label for="txtEmail"></label>
+                <input type="text" name="txtEmail" id="txtEmail">
             </div>
-        </form>
+            <div id="botaoES"><a href="loginCCR.html" id="botaoEnviar">Enviar</a></div>   
         </main>
-    <footer id="rodape">
-        <div class="conteudoRodape">
-            <nav id="navRodape">
-                <div id="pt1">
-                    <a href="homeCCR.html">HOME</a>
-                    <br>
-                    <a href="loginCCR.html">ACESSE A SUA CONTA/ CADASTRE-SE</a>
-                    <br>
-                    <a href="mapaMetroCCR.html">MAPA DO METRÔ/ TREM</a>
-                </div>
-                <div id ="pt2">
-                    <a href="chatReportarCCR.html">NOTIFICAR PARA A CECI</a>
-                    <br>
-                    <a href="chatAjudaCCR.html">FALAR COM A CECI</a>
-                    <br>
-                    <a href="integrantesCCR.html">INTEGRANTES</a>
-                </div>
-                <div id="logoRodape">
-                    <img src ="images/logo.png" alt="logo"></a>
-                    <p id="copy">© Copyright 2024 | Grupo CCR</p>
-                </div>
-            </nav>
-        </div>
-    </footer>
-</body>
-    <script src="js/script.js"></script>
-</html>
+        <footer id="rodape">
+            <div class="conteudoRodape">
+                <nav id="navRodape">
+                    <div id="pt1">
+                        <a href="homeCCR.html">HOME</a>
+                        <br>
+                        <a href="loginCCR.html">ACESSE A SUA CONTA/ CADASTRE-SE</a>
+                        <br>
+                        <a href="mapaMetroCCR.html">MAPA DO METRÔ/ TREM</a>
+                    </div>
+                    <div id ="pt2">
+                        <a href="chatReportarCCR.html">NOTIFICAR PARA A CECI</a>
+                        <br>
+                        <a href="chatAjudaCCR.html">FALAR COM A CECI</a>
+                        <br>
+                        <a href="integrantesCCR.html">INTEGRANTES</a>
+                    </div>
+                    <div id="logoRodape">
+                        <img src ="images/logo.png" alt="logo"></a>
+                        <p id="copy">© Copyright 2024 | Grupo CCR</p>
+                    </div>
+                </nav>
+            </div>
+        </footer>
+    </body>
+        <script src="js/script.js"></script>
+    </html>
+        

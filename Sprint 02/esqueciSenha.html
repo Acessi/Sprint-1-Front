@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="icon" href="images/logo.png" type="faviconLogo">
-    <title>Mapa do Metrô</title>
+    <title>Redefinir Senha</title>
 </head>
 
 <body>
@@ -76,10 +76,10 @@
             </div>
             <div class="linkHeader">
                 <div class="cabecalho">
-                    <section class="linksCabecalho">
+                    <div class="linksCabecalho">
                         <a href="login.html">LOGIN</a> |
                         <a href="#" id="busca">BUSCA</a>
-                    </section>
+                    </div>
                     <div class="linksCabecalhoIcones">
                         <a href="#"><img src="images/lupa.png" alt="lupa" class="lupa" id="search-icon"></a>
                         <a href="atualizarCadastro.html"><img src="images/usuario_branco.png" alt="perfil"
@@ -90,35 +90,14 @@
         </div>
     </header>
         <main>
-        <div class="botoesMenuMapa">
-            <a href="home.html" class="botaoM">HOME</a>
-            <a href="mapaMetro.html" class="botaoAtivado">MAPA DO METRÔ/TREM</a>
-            <a href="chatReportar.html" class="botaoM botaoReportar">REPORTAR PARA A CECI</a>
-            <a href="chatAjuda.html" class="botaoM botaoFalar">FALAR COM A CECI</a>
-            <a href="integrantes.html" class="botaoM">INTEGRANTES</a>
-            <a href="login.html" class="botaoM_Acesse">
-                <span id="linha1"><b>ACESSE SUA CONTA</b></span>
-                <span id="linha2">OU CADASTRE-SE GRÁTIS</span>
-            </a>
-        </div>
-        <div id="search-container">
-            <input type="text" id="search-input" placeholder="Digite sua busca..." />
-            <button id="search-button">Pesquisar</button>
-        </div>
-        <h1>Mapa Metropolitano do Metrô de São Paulo</h1>
-        <div id="mapaMetro-container">
-            <img src="images/mapaMetro.jpg" alt="Mapa do Metrô" id="mapaMetro">
-        </div>
-        <div id="botoesReportarAjuda">
-            <a href="chatReportar.html" class="botaoR">
-                <img src="images/reportar.png" alt="Ícone Reportar" class="icone-botao">
-                <b>REPORTAR PARA A CECI</b>
-            </a>                
-            <a href="chatAjuda.html" class="botaoA">
-                <img src="images/falar.png" alt="Ícone Ceci" class="icone-botao">
-                <b>FALAR COM A CECI</b>
-            </a>
-        </div>
+            <h1 id="esqueciSenhaTitulo">Esqueceu sua senha?</h1>
+            <h2 id="esqueciSenhaTexto">Enviaremos um e-mail com instruções<br>de como redefinir a sua senha!<br><br>
+                Digite o e-mail cadastrado:</h2>
+            <div id="inputEmail">
+                <label for="txtEmail"></label>
+                <input type="text" name="txtEmail" id="txtEmail">
+            </div>
+            <div id="botaoES"><a href="login.html" id="botaoEnviar">Enviar</a></div> 
         </main>
         <footer id="rodape">
             <div class="conteudoRodape">

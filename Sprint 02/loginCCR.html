@@ -4,73 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cssCCR/estiloCCR.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="images/logo.png" type="faviconLogo">
     <title>Login</title>
 </head>
 
 <body>
-    <header id="header">
+    <header id="headerCCR">
         <div class="wrapper">
-            <nav>
-                <div class="hamburguer" id="hamburguer-icon">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <div class="content">
-                    <section id="linksCabecalho">
+            <div class="hamb">
+                <nav id = "navCCR" >
+                    <div class="hamburguer" id="hamburguer-icon">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div id="menu" class="menu">
+                        <ul>
+                            <li>
+                                <a href="loginCCR.html">
+                                    <img src="images/usuario.png" alt="Ícone para acessar conta" class="icon">Acesse sua conta
+                                </a>
+                                <div>
+                                    <a href="cadastroCCR.html" class="cadastre-se">ou cadastre-se grátis</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="homeCCR.html">
+                                    <img src="images/home.png" alt="Ícone da página inicial" class="icon">Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mapaMetroCCR.html">
+                                    <img src="images/mapa.png" alt="Ícone de mapa do metrô e trem" class="icon">Mapa do metrô/Trem
+                                </a>
+                            </li>
+                            <li>
+                                <a href="chatReportarCCR.html">
+                                    <img src="images/reportar.png" alt="Ícone para notificar problema para Ceci"
+                                        class="icon">Notificar para a Ceci
+                                </a>
+                            </li>
+                            <li>
+                                <a href="chatAjudaCCR.html">
+                                    <img src="images/falar.png" alt="Ícone para pedir ajuda à Ceci" class="icon">Falar com a Ceci
+                                </a>
+                            </li>
+                            <li>
+                                <a href="integrantesCCR.html">
+                                    <img src="images/usuario.png" alt="Ícone de integrantes da equipe"
+                                        class="icon">Integrantes
+                                </a>
+                            </li>
+                            <li>
+                                <a href="loginCCR.html" class="desconectar">
+                                    <img src="images/deslogar.png" alt="Ícone para desconectar" class="icon">Desconectar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="logo">
+                <a href="homeCCR.html">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="linkHeader">
+                <div class="cabecalho">
+                    <section class="linksCabecalho">
                         <a href="loginCCR.html">LOGIN</a> |
                         <a href="#" id="busca">BUSCA</a>
                     </section>
+                    <div class="linksCabecalhoIcones">
+                        <a href="#"><img src="images/lupa.png" alt="lupa" class="lupa" id="search-icon"></a>
+                        <a href="atualizarCadastroCCR.html"><img src="images/usuario_branco.png" alt="perfil"
+                                class="perfil"></a>
+                    </div>
                 </div>
-                <div>
-                    <img src ="images/logo.png" alt="logo" class="logo"></a>
-                    <a href="#"><img src="images/lupa.png" alt="lupa" class="lupa" id="search-icon"></a>
-                    <a href="atualizarCadastroCCR.html"><img src ="images/usuario_branco.png" alt="perfil" class="perfil"></a>
-                </div>
-                <div id="menu" class="menu">
-                    <ul>
-                        <li>
-                            <a href="loginCCR.html">
-                                <img src="images/usuario.png" alt="Ícone para acessar conta" class="icon">Acesse sua conta
-                            </a>
-                            <div>
-                                <a href="cadastroCCR.html" class="cadastre-se">ou cadastre-se grátis</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="homeCCR.html">
-                                <img src="images/home.png" alt="Ícone da página inicial" class="icon">Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mapaMetroCCR.html">
-                                <img src="images/mapa.png" alt="Ícone de mapa do metrô e trem" class="icon">Mapa do metrô/Trem
-                            </a>
-                        </li>
-                        <li>
-                            <a href="chatReportarCCR.html">
-                                <img src="images/reportar.png" alt="Ícone para reportar problema para Ceci" class="icon">Reportar para Ceci
-                            </a>
-                        </li>
-                        <li>
-                            <a href="chatAjudaCCR.html">
-                                <img src="images/falar.png" alt="Ícone para pedir ajuda à Ceci" class="icon">Falar com a Ceci
-                            </a>
-                        </li>
-                        <li>
-                            <a href="integrantesCCR.html">
-                                <img src="images/usuario.png" alt="Ícone de integrantes da equipe" class="icon">Integrantes
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="desconectar">
-                                <img src="images/deslogar.png" alt="Ícone para desconectar" class="icon">Desconectar
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            </div>
         </div>
     </header>
         <main>
@@ -97,7 +109,7 @@
             <a href="homeCCR.html" class="botaoEntrar">Entrar</a>
         </div>
         <div id="esqueciSenha">
-            <a href="#">Esqueci minha senha...</a>
+            <a href="esqueciSenhaCCR.html">Esqueci minha senha...</a>
         </div>
         </main>
     <footer id="rodape">
@@ -111,7 +123,7 @@
                     <a href="mapaMetroCCR.html">MAPA DO METRÔ/ TREM</a>
                 </div>
                 <div id ="pt2">
-                    <a href="chatReportarCCR.html">REPORTAR PARA CECI</a>
+                    <a href="chatReportarCCR.html">NOTIFICAR PARA A CECI</a>
                     <br>
                     <a href="chatAjudaCCR.html">FALAR COM A CECI</a>
                     <br>

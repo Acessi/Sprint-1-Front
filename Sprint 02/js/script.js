@@ -8,9 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Alterna o menu ao clicar no ícone do hambúrguer
     hamburguerIcon.addEventListener('click', (event) => {
         event.stopPropagation(); // Evita que o evento se propague e acione o evento de clique fora do menu
+        // Fecha o menu
         if (menu.classList.contains('show')) {
             menu.classList.remove('show');
             menu.classList.add('hide');
+         // Abre o menu
         } else {
             menu.style.display = 'block';
             menu.classList.remove('hide');
@@ -21,12 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Alterna o campo de pesquisa ao clicar na lupa ou no link "BUSCA"
     searchIcon.addEventListener('click', (event) => {
         event.stopPropagation(); // Evita que o evento se propague e acione o evento de clique fora do menu
+        // Abre ou fecha o campo de pesquisa
         searchContainer.style.display = 
             searchContainer.style.display === 'block' ? 'none' : 'block';
     });
 
     busca.addEventListener('click', (event) => {
         event.stopPropagation(); // Evita que o evento se propague e acione o evento de clique fora do menu
+        // Abre ou fecha o campo de pesquisa
         searchContainer.style.display = 
             searchContainer.style.display === 'block' ? 'none' : 'block';
     });
@@ -37,11 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const isClickInsideSearch = searchContainer.contains(event.target);
 
         if (!isClickInsideMenu && menu.classList.contains('show')) {
+            // Fecha o menu
             menu.classList.remove('show');
             menu.classList.add('hide');
         }
 
         if (!isClickInsideSearch && searchContainer.style.display === 'block') {
+            // Fecha o campo de pesquisa
             searchContainer.style.display = 'none';
         }
     });
@@ -49,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Adiciona um evento de animação para ocultar o menu após a animação de saída
     menu.addEventListener('animationend', () => {
         if (menu.classList.contains('hide')) {
+            // Oculta o menu após a animação de saída
             menu.style.display = 'none';
         }
     });
@@ -65,7 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (arquivo) {
                 const leitor = new FileReader();
                 leitor.onload = function(e) {
+                    // Mostra a imagem carregada
                     visualizacaoImagem.src = e.target.result;
+                    visualizacaoImagem.style.width = "150px";
+                    visualizacaoImagem.style.height = "150px";
+                    visualizacaoImagem.style.borderRadius = "50%";
+                    visualizacaoImagem.style.objectFit = "cover";
                 };
                 leitor.readAsDataURL(arquivo);
             }
